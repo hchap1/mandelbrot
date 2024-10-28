@@ -9,3 +9,5 @@ I -> Increase order.<br>
 O -> Decrease order.<br>
 SHIFT -> Zoom out.<br>
 SPACE -> Zoom in.<br>
+
+![alt text]([https://github.com/hchap1/mandelbrot/blob/main/screenshots/1.png?raw=true])
