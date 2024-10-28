@@ -81,7 +81,7 @@ void main() {
     }
     if (colour < o * 0.5) {
         // FragColor = hsvToRgb(colour / o + 0.2, pow(colour / o * 1.2, 1.2) + 0.2, 1.0); // Output color
-        FragColor = vec4(colour / o * 0.5, colour / o * 0.5, colour / o, 1.0);
+        FragColor = vec4(colour / o, colour / o * 0.2, colour / o * 0.2, 1.0);
     } else {
         FragColor = vec4(0.0,0.0,0.0,1.0);
     }
