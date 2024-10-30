@@ -32,7 +32,7 @@ int main() {
 	float offset_a = 0.0;
 	float offset_b = 0.0;
 
-	float order = 1000.0f;
+	float order = 500.0f;
 	
 	testTriangle.setVertices(vertices, 2, 6, GL_DYNAMIC_DRAW);
 	testTriangle.setFloat("x_min", x_min);

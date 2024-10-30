@@ -114,24 +114,24 @@ public:
         glBufferData(GL_ARRAY_BUFFER, numTriangles * numFloatsPerTriangle * sizeof(float), vertices, mode);
     }
     void draw(int numTriangles) {
-        std::lock_guard<std::mutex> lock(mtx);
         glBindVertexArray(VAO);
         glBindTexture(GL_TEXTURE_2D, texture);
         shader.use();
         glDrawArrays(GL_TRIANGLES, 0, numTriangles * 3);
     }
     void setFloat(std::string name, float value) {
-        std::lock_guard<std::mutex> lock(mtx);
         shader.use();
         shader.setFloat(name, value);
     }
+    void setDouble(std::string name, double value) {
+        shader.use();
+        shader.setDouble(name, value);
+    }
     void setBool(std::string name, bool value) {
-        std::lock_guard<std::mutex> lock(mtx);
         shader.use();
         shader.setBool(name, value);
     }
     void setArray_64_vec4(std::string name, float (*value)[4], int elementCount) {
-        std::lock_guard<std::mutex> lock(mtx);
         shader.use();
         float** arr = new float* [64];
         for (int i = 0; i < 64; ++i) {
